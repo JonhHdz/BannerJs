@@ -1,0 +1,139 @@
+*,*:before,*:after{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;margin:0;padding:0;outline:none;}
+.animated{
+	-webkit-animation-duration:1s;
+	animation-duration:1s;
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both
+}
+
+.fadeInUp{
+	-webkit-animation-name:fadeInUp;
+	animation-name:fadeInUp
+}
+@-webkit-keyframes fadeInUp{
+	0%{
+	opacity:0;
+	-webkit-transform:translate3d(0,100%,0);
+	transform:translate3d(0,100%,0)
+	}
+	to{
+	opacity:1;
+	-webkit-transform:none;
+	transform:none
+	}
+}
+@keyframes fadeInUp{
+	0%{
+	opacity:0;
+	-webkit-transform:translate3d(0,100%,0);
+	transform:translate3d(0,100%,0)
+	}
+	to{
+	opacity:1;
+	-webkit-transform:none;
+	transform:none
+	}
+}
+.efecto{
+    position: relative;
+    background: #111;
+    overflow: hidden;
+    width: 100%;
+}
+.efecto:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.efecto > div{
+    display: inline;
+    float: left;
+    width: 25%;
+    height: 100%;
+    opacity: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+    position: relative;
+}
+
+.efecto > div > div{
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.efecto .efectoCont{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.efecto > div:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+.efecto .efectoCont div{
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    padding: 0px 15px;
+    position: relative;
+    z-index: 5;
+}
+.efecto .button{
+    display: block;
+    margin: -1em auto 1em;
+    max-width: 200px;
+    opacity: 0;
+    -webkit-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+.efecto > div:hover .button{
+    opacity: 1;
+    margin: 1em auto;
+    -webkit-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+.efecto > div.hovered{
+    width: 40%;
+    -webkit-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+.efecto > div.notHover{
+    width: 20%;
+    -webkit-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+.delay1{
+    -webkit-animation-delay: 0.4s;
+    -o-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+.delay2{
+    -webkit-animation-delay: 0.8s;
+    -o-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+.delay3{
+    -webkit-animation-delay: 1.2s;
+    -o-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+@media screen and (max-width: 960px){
+    .efecto > div{
+      width: 100%;
+      height: auto;
+      padding: 30px 0; }
+}

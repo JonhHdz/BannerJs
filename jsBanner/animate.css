@@ -1,38 +1,39 @@
 *,*:before,*:after{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;margin:0;padding:0;outline:none;}
 .animated{
-	-webkit-animation-duration:1s;
-	animation-duration:1s;
-	-webkit-animation-fill-mode:both;
-	animation-fill-mode:both
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both
 }
 
 .fadeInUp{
-	-webkit-animation-name:fadeInUp;
-	animation-name:fadeInUp
+    -webkit-animation-name:fadeInUp;
+    animation-name:fadeInUp;
+    opacity: 0;
 }
 @-webkit-keyframes fadeInUp{
-	0%{
-	opacity:0;
-	-webkit-transform:translate3d(0,100%,0);
-	transform:translate3d(0,100%,0)
-	}
-	to{
-	opacity:1;
-	-webkit-transform:none;
-	transform:none
-	}
+    0%{
+    opacity:0;
+    -webkit-transform:translate3d(0,100%,0);
+    transform:translate3d(0,100%,0)
+    }
+    to{
+    opacity:1;
+    -webkit-transform:none;
+    transform:none
+    }
 }
 @keyframes fadeInUp{
-	0%{
-	opacity:0;
-	-webkit-transform:translate3d(0,100%,0);
-	transform:translate3d(0,100%,0)
-	}
-	to{
-	opacity:1;
-	-webkit-transform:none;
-	transform:none
-	}
+    0%{
+    opacity:0;
+    -webkit-transform:translate3d(0,100%,0);
+    transform:translate3d(0,100%,0)
+    }
+    to{
+    opacity:1;
+    -webkit-transform:none;
+    transform:none
+    }
 }
 .efecto{
     position: relative;
@@ -45,12 +46,10 @@
     display: block;
     clear: both;
 }
-.efecto > div{
+.efecto > .animated{
     display: inline;
     float: left;
-    width: 25%;
     height: 100%;
-    opacity: 0;
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
@@ -60,7 +59,10 @@
     position: relative;
 }
 
-.efecto > div > div{
+.efecto > .animated{
+}
+
+.efecto > .animated > div{
     display: table;
     height: 100%;
     width: 100%;
@@ -71,7 +73,7 @@
     vertical-align: middle;
 }
 
-.efecto > div:before{
+.efecto > .animated:before{
     content: '';
     position: absolute;
     left: 0;
@@ -92,26 +94,25 @@
     display: block;
     margin: -1em auto 1em;
     max-width: 200px;
+    text-align: center;
     opacity: 0;
     -webkit-transition: all ease-in-out 0.3s;
     -o-transition: all ease-in-out 0.3s;
     transition: all ease-in-out 0.3s;
 }
-.efecto > div:hover .button{
+.efecto > .animated:hover .button{
     opacity: 1;
     margin: 1em auto;
     -webkit-transition: all ease-in-out 0.3s;
     -o-transition: all ease-in-out 0.3s;
     transition: all ease-in-out 0.3s;
 }
-.efecto > div.hovered{
-    width: 40%;
+.efecto > .animated.hovered{
     -webkit-transition: all ease-in-out 0.3s;
     -o-transition: all ease-in-out 0.3s;
     transition: all ease-in-out 0.3s;
 }
-.efecto > div.notHover{
-    width: 20%;
+.efecto > .animated.notHover{
     -webkit-transition: all ease-in-out 0.3s;
     -o-transition: all ease-in-out 0.3s;
     transition: all ease-in-out 0.3s;
@@ -131,8 +132,94 @@
     -o-animation-delay: 1.2s;
     animation-delay: 1.2s;
 }
+.delay4{
+    -webkit-animation-delay: 1.6s;
+    -o-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+}
+.delay5{
+    -webkit-animation-delay: 2s;
+    -o-animation-delay: 2s;
+    animation-delay: 2s;
+}
+.delay6{
+    -webkit-animation-delay: 2.4s;
+    -o-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+}
+.delay7{
+    -webkit-animation-delay: 2.8s;
+    -o-animation-delay: 2.8s;
+    animation-delay: 2.8s;
+}
+.delay8{
+    -webkit-animation-delay: 3.2s;
+    -o-animation-delay: 3.2s;
+    animation-delay: 3.2s;
+}
+.delay9{
+    -webkit-animation-delay: 3.6s;
+    -o-animation-delay: 3.6s;
+    animation-delay: 3.6s;
+}
+.delay10{
+    -webkit-animation-delay: 4s;
+    -o-animation-delay: 4s;
+    animation-delay: 4s;
+}
+
+.efecto > .hovered[data-elements="1"]{
+    width: 100% !important; }
+.efecto > .notHover[data-elements="1"]{
+    width: 100% !important; }
+
+.efecto > .hovered[data-elements="2"]{
+    width: 66.66% !important; }
+.efecto > .notHover[data-elements="2"]{
+    width: 33.33% !important; }
+
+.efecto > .hovered[data-elements="3"]{
+    width: 50% !important; }
+.efecto > .notHover[data-elements="3"]{
+    width: 25% !important; }
+
+.efecto > .hovered[data-elements="4"]{
+    width: 40% !important; }
+.efecto > .notHover[data-elements="4"]{
+    width: 20% !important; }
+
+.efecto > .hovered[data-elements="5"]{
+    width: 33.33% !important; }
+.efecto > .notHover[data-elements="5"]{
+    width: 16.66% !important; }
+
+.efecto > .hovered[data-elements="6"]{
+    width: 28.5614% !important; }
+.efecto > .notHover[data-elements="6"]{
+    width: 14.2856% !important; }
+
+.efecto > .hovered[data-elements="7"]{
+    width: 25% !important; }
+.efecto > .notHover[data-elements="7"]{
+    width: 12.5% !important; }
+
+.efecto > .hovered[data-elements="8"]{
+    width: 22.22% !important; }
+.efecto > .notHover[data-elements="8"]{
+    width: 11.11% !important; }
+
+.efecto > .hovered[data-elements="9"]{
+    width: 20% !important; }
+.efecto > .notHover[data-elements="9"]{
+    width: 10% !important; }
+
+.efecto > .hovered[data-elements="10"]{
+    width: 18.1818% !important; }
+.efecto > .notHover[data-elements="10"]{
+    width: 9.0909% !important; }
+
 @media screen and (max-width: 960px){
-    .efecto > div{
+    .efecto > .animated{
       width: 100%;
       height: auto;
       padding: 30px 0; }
